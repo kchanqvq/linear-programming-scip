@@ -1,7 +1,7 @@
 * linear-programming-scip
 
 This is a backend for the [[https://github.com/neil-lindquist/linear-programming][linear-programming]] Common Lisp library using the state-of-the-art [[https://www.scipopt.org/][SCIP]] solver.
-To use this backend, evaluate =(setf linear-programming:*solver* linear-programming-scip:scip-solver)= before calling =linear-programming:solve-problem=. Then, the linear-programming library will automatically use GLPK to solve problems.
+To use this backend, evaluate =(setf linear-programming:*solver* linear-programming-scip:scip-solver)= before calling =linear-programming:solve-problem=. Then, the linear-programming library will automatically use SCIP to solve problems.
 
 =scip-solver= support a number of options from the SCIP solver. For example, =(setf linear-programming:*solver* (alexandria:curry linear-programming-scip:scip-solver :time-limit 120))= to run the solver with a time limit of 120 seconds. For the full list of supported option, see the definition of =linear-programming-scip:scip-solver=. Feel free to suggest more options to implement in the [[https://github.com/kchanqvq/linear-programming-scip/issues][issues]] section!
 
