@@ -28,7 +28,7 @@
   (:documentation "Indicates that SCIP solver failed."))
 
 (define-condition premature-solution-error (linear-programming:solver-error)
-  ((status :initarg :exit-code :accessor status))
+  ((status :initarg :status :accessor status))
   (:report (lambda (err stream)
              (format stream "Solver returned prematurely with status ~A"
                      (status err))))
